@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D58F22014572B260081530C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D58F21F14572B260081530C /* UIKit.framework */; };
+		8D58F22214572B260081530C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D58F22114572B260081530C /* Foundation.framework */; };
+		8D58F22414572B260081530C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D58F22314572B260081530C /* CoreGraphics.framework */; };
+		8D58F22A14572B260081530C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D58F22814572B260081530C /* InfoPlist.strings */; };
+		8D58F22C14572B260081530C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D58F22B14572B260081530C /* main.m */; };
+		8D58F23014572B260081530C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D58F22F14572B260081530C /* AppDelegate.m */; };
+		8D58F23314572B260081530C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D58F23114572B260081530C /* MainStoryboard.storyboard */; };
+		8D58F23614572B260081530C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D58F23514572B260081530C /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D58F21B14572B260081530C /* InfiniteHorizontalScroll-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InfiniteHorizontalScroll-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D58F21F14572B260081530C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8D58F22114572B260081530C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8D58F22314572B260081530C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8D58F22714572B260081530C /* InfiniteHorizontalScroll-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfiniteHorizontalScroll-iOS-Info.plist"; sourceTree = "<group>"; };
+		8D58F22914572B260081530C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8D58F22B14572B260081530C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D58F22D14572B260081530C /* InfiniteHorizontalScroll-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfiniteHorizontalScroll-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		8D58F22E14572B260081530C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8D58F22F14572B260081530C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8D58F23214572B260081530C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8D58F23414572B260081530C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8D58F23514572B260081530C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D58F21814572B260081530C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D58F22014572B260081530C /* UIKit.framework in Frameworks */,
+				8D58F22214572B260081530C /* Foundation.framework in Frameworks */,
+				8D58F22414572B260081530C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D58F21014572B260081530C = {
+			isa = PBXGroup;
+			children = (
+				8D58F22514572B260081530C /* InfiniteHorizontalScroll-iOS */,
+				8D58F21E14572B260081530C /* Frameworks */,
+				8D58F21C14572B260081530C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D58F21C14572B260081530C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D58F21B14572B260081530C /* InfiniteHorizontalScroll-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D58F21E14572B260081530C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D58F21F14572B260081530C /* UIKit.framework */,
+				8D58F22114572B260081530C /* Foundation.framework */,
+				8D58F22314572B260081530C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D58F22514572B260081530C /* InfiniteHorizontalScroll-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8D58F22E14572B260081530C /* AppDelegate.h */,
+				8D58F22F14572B260081530C /* AppDelegate.m */,
+				8D58F23114572B260081530C /* MainStoryboard.storyboard */,
+				8D58F23414572B260081530C /* ViewController.h */,
+				8D58F23514572B260081530C /* ViewController.m */,
+				8D58F22614572B260081530C /* Supporting Files */,
+			);
+			path = "InfiniteHorizontalScroll-iOS";
+			sourceTree = "<group>";
+		};
+		8D58F22614572B260081530C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D58F22714572B260081530C /* InfiniteHorizontalScroll-iOS-Info.plist */,
+				8D58F22814572B260081530C /* InfoPlist.strings */,
+				8D58F22B14572B260081530C /* main.m */,
+				8D58F22D14572B260081530C /* InfiniteHorizontalScroll-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D58F21A14572B260081530C /* InfiniteHorizontalScroll-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D58F23914572B260081530C /* Build configuration list for PBXNativeTarget "InfiniteHorizontalScroll-iOS" */;
+			buildPhases = (
+				8D58F21714572B260081530C /* Sources */,
+				8D58F21814572B260081530C /* Frameworks */,
+				8D58F21914572B260081530C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "InfiniteHorizontalScroll-iOS";
+			productName = "InfiniteHorizontalScroll-iOS";
+			productReference = 8D58F21B14572B260081530C /* InfiniteHorizontalScroll-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D58F21214572B260081530C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 8D58F21514572B260081530C /* Build configuration list for PBXProject "InfiniteHorizontalScroll-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8D58F21014572B260081530C;
+			productRefGroup = 8D58F21C14572B260081530C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D58F21A14572B260081530C /* InfiniteHorizontalScroll-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D58F21914572B260081530C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D58F22A14572B260081530C /* InfoPlist.strings in Resources */,
+				8D58F23314572B260081530C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D58F21714572B260081530C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D58F22C14572B260081530C /* main.m in Sources */,
+				8D58F23014572B260081530C /* AppDelegate.m in Sources */,
+				8D58F23614572B260081530C /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D58F22814572B260081530C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D58F22914572B260081530C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8D58F23114572B260081530C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D58F23214572B260081530C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D58F23714572B260081530C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8D58F23814572B260081530C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D58F23A14572B260081530C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InfiniteHorizontalScroll-iOS/InfiniteHorizontalScroll-iOS-Prefix.pch";
+				INFOPLIST_FILE = "InfiniteHorizontalScroll-iOS/InfiniteHorizontalScroll-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8D58F23B14572B260081530C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InfiniteHorizontalScroll-iOS/InfiniteHorizontalScroll-iOS-Prefix.pch";
+				INFOPLIST_FILE = "InfiniteHorizontalScroll-iOS/InfiniteHorizontalScroll-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D58F21514572B260081530C /* Build configuration list for PBXProject "InfiniteHorizontalScroll-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D58F23714572B260081530C /* Debug */,
+				8D58F23814572B260081530C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D58F23914572B260081530C /* Build configuration list for PBXNativeTarget "InfiniteHorizontalScroll-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D58F23A14572B260081530C /* Debug */,
+				8D58F23B14572B260081530C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D58F21214572B260081530C /* Project object */;
+}
