@@ -8,12 +8,20 @@
 
 #import "ViewController.h"
 
+#include <stdlib.h>
+
 @implementation ViewController
+
+@synthesize scrollView=_scrollView;
+@synthesize view1=_view1, view2=_view2;
+@synthesize lastContentOffset=_lastContentOffset;
+@synthesize scrollDirection=_scrollDirection;
+
+@synthesize colors=_colors;
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -21,14 +29,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.colors = [[NSMutableArray alloc] initWithObjects:[UIColor whiteColor], 
+                              [UIColor yellowColor], 
+                              [UIColor blackColor], 
+                              [UIColor orangeColor],
+                              [UIColor lightGrayColor],
+                              [UIColor greenColor], 
+                              [UIColor blueColor], 
+                              [UIColor purpleColor],nil];
+    
+    self.view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.view1.backgroundColor = [UIColor redColor];
+    self.view2 = [[UIView alloc] initWithFrame:CGRectMake(320, 0, 320, 480)];
+    self.view2.backgroundColor = [UIColor yellowColor];
+    
+    [self.scrollView addSubview:self.view1];
+    [self.scrollView addSubview:self.view2];
+    
+    self.scrollView.bounces = NO;
+    self.scrollView.contentSize = CGSizeMake(640, 416);
+    [self.scrollView setShowsHorizontalScrollIndicator:NO];
+    [self.scrollView scrollRectToVisible:CGRectMake(0,0,320,416) animated:NO];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,8 +80,47 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)sender  {
+    
+    //Forward only
+    if(self.scrollDirection == 0) {
+        CGRect rect1 = self.view1.frame;
+        CGRect rect2 = self.view2.frame;
+        self.view2.frame = rect1;
+        self.view1.frame = rect2;
+        [self.scrollView scrollRectToVisible:CGRectMake(0,0,320,480) animated:NO];
+        
+        if(self.view2.frame.origin.x == 320) {
+            self.view2.backgroundColor = [self randomColor];
+        } else if(self.view1.frame.origin.x == 320) {
+            self.view1.backgroundColor = [self randomColor];
+        }
+        
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    
+    if (self.lastContentOffset > self.scrollView.contentOffset.x) {
+        self.scrollDirection = 1;
+    } else if (lastContentOffset < self.scrollView.contentOffset.x) {
+        self.scrollDirection = 0;
+    } 
+    self.lastContentOffset = self.scrollView.contentOffset.x;
+}
+
+#pragma Mark - Custom methods
+
+- (UIColor*) randomColor {
+    
+      int color = arc4random() % [self.colors count];
+      return (UIColor *)[self.colors objectAtIndex:color];
+}
+
 
 @end
