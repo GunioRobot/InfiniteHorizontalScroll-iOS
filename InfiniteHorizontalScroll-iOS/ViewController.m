@@ -31,13 +31,13 @@
     [super viewDidLoad];
     
     self.colors = [[NSMutableArray alloc] initWithObjects:[UIColor whiteColor], 
-                              [UIColor yellowColor], 
-                              [UIColor blackColor], 
-                              [UIColor orangeColor],
-                              [UIColor lightGrayColor],
-                              [UIColor greenColor], 
-                              [UIColor blueColor], 
-                              [UIColor purpleColor],nil];
+                   [UIColor yellowColor], 
+                   [UIColor blackColor], 
+                   [UIColor orangeColor],
+                   [UIColor lightGrayColor],
+                   [UIColor greenColor], 
+                   [UIColor blueColor], 
+                   [UIColor purpleColor],nil];
     
     self.view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     self.view1.backgroundColor = [UIColor redColor];
@@ -92,31 +92,46 @@
     } else if (self.lastContentOffset < self.scrollView.contentOffset.x) {
         self.scrollDirection = 0;
     } 
-    
     self.lastContentOffset = self.scrollView.contentOffset.x;
     
     if(self.scrollDirection == 0 && self.lastContentOffset == 320) {
-        CGRect rect1 = self.view1.frame;
-        CGRect rect2 = self.view2.frame;
-        self.view2.frame = rect1;
-        self.view1.frame = rect2;
+        [self swapViews];
         [self.scrollView scrollRectToVisible:CGRectMake(0,0,320,480) animated:NO];
         if(self.view2.frame.origin.x == 320) {
-            self.view2.backgroundColor = [self randomColor];
+            [self loadView2Content];
         } else if(self.view1.frame.origin.x == 320) {
-            self.view1.backgroundColor = [self randomColor];
+            [self loadView1Content];
         }
         
     }
-
+    
 }
 
 #pragma Mark - Custom methods
 
 - (UIColor*) randomColor {
     
-      int color = arc4random() % [self.colors count];
-      return (UIColor *)[self.colors objectAtIndex:color];
+    int color = arc4random() % [self.colors count];
+    return (UIColor *)[self.colors objectAtIndex:color];
+}
+
+- (void) loadView2Content {
+    
+    self.view2.backgroundColor = [self randomColor];
+    //load new content to display in the next move (random quote, random notice, ...)
+}
+
+- (void) loadView1Content {
+    self.view1.backgroundColor = [self randomColor];
+    //load new content to display in the next move (random quote, random notice, ...)
+}
+
+- (void) swapViews {
+    
+    CGRect rect1 = self.view1.frame;
+    CGRect rect2 = self.view2.frame;
+    self.view2.frame = rect1;
+    self.view1.frame = rect2;
 }
 
 

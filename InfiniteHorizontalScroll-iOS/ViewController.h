@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<UIScrollViewDelegate> {
-
+    
     IBOutlet UIScrollView *scrollView;
     UIView *_view1;
     UIView *_view2;
@@ -30,5 +30,9 @@
 @property(nonatomic, assign) int scrollDirection;
 
 - (UIColor*) randomColor;
+
+- (void) loadView1Content;
+- (void) loadView2Content;
+- (void) swapViews;
 
 @end
