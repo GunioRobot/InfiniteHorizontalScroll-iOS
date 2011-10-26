@@ -85,16 +85,22 @@
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)sender  {
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
     
-    //Forward only
-    if(self.scrollDirection == 0) {
+    if (self.lastContentOffset > self.scrollView.contentOffset.x) {
+        self.scrollDirection = 1;
+    } else if (self.lastContentOffset < self.scrollView.contentOffset.x) {
+        self.scrollDirection = 0;
+    } 
+    
+    self.lastContentOffset = self.scrollView.contentOffset.x;
+    
+    if(self.scrollDirection == 0 && self.lastContentOffset == 320) {
         CGRect rect1 = self.view1.frame;
         CGRect rect2 = self.view2.frame;
         self.view2.frame = rect1;
         self.view1.frame = rect2;
         [self.scrollView scrollRectToVisible:CGRectMake(0,0,320,480) animated:NO];
-        
         if(self.view2.frame.origin.x == 320) {
             self.view2.backgroundColor = [self randomColor];
         } else if(self.view1.frame.origin.x == 320) {
@@ -102,16 +108,7 @@
         }
         
     }
-}
 
-- (void)scrollViewDidScroll:(UIScrollView *)sender {
-    
-    if (self.lastContentOffset > self.scrollView.contentOffset.x) {
-        self.scrollDirection = 1;
-    } else if (lastContentOffset < self.scrollView.contentOffset.x) {
-        self.scrollDirection = 0;
-    } 
-    self.lastContentOffset = self.scrollView.contentOffset.x;
 }
 
 #pragma Mark - Custom methods
